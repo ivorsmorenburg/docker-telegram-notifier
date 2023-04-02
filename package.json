@@ -1,0 +1,34 @@
+{
+  "name": "docker-telegram-notifier",
+  "version": "1.0.1",
+  "description": "Telegram integration for notifying Docker events",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivorsmorenburg/docker-telegram-notifier"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "healthcheck": "node index.js healthcheck"
+  },
+  "keywords": [
+    "docker",
+    "telegram",
+    "notifications"
+  ],
+  "author": "Ivor Smorenburg",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dockerode": "^3.3.4",
+    "JSONStream": "^1.3.5",
+    "telegraf": "^4.12.2",
+    "telegraf-ratelimit": "^2.0.0",
+    "request-rate-limiter": "^2.0.3",
+    "rate-limiter-flexible": "^2.4.1",
+    "uuid": "^9.0.0",
+    "delay": "^5.0.0",
+    "async": "^3.2.4",
+    "dotenv": "^16.0.3",
+    "telegraf-throttler": "^0.6.0"
+  }
+}

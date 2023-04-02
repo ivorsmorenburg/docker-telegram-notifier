@@ -1,0 +1,26 @@
+---
+version: "3.8"
+services:
+  notifier:
+    container_name: pumpys-telegram-notifier
+    build: .
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      # How to create bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
+      # How to get chat id: https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id/32572159#32572159
+    - TELEGRAM_NOTIFIER_BOT_TOKEN
+    - TELEGRAM_NOTIFIER_CHAT_ID
+    - TELEGRAM_NOTIFIER_TOPIC_ID
+    - DOCKER_MACHINE_NAME
+    - DEBUG
+    networks:
+      sds-services:
+
+
+
+networks:
+  sds-services:
+
+
