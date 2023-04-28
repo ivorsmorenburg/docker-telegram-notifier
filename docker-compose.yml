@@ -3,7 +3,8 @@ version: "3.8"
 services:
   notifier:
     container_name: pumpys-telegram-notifier
-    build: .
+#    build: .
+    image: ghcr.io/ivorsmorenburg/docker-telegram-notifier:main
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
